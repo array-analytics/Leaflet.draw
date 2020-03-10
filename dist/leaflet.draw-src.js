@@ -1,14 +1,14 @@
 /*
- Leaflet.draw 1.0.3+d5dd117, a plugin that adds drawing and editing tools to Leaflet powered maps.
+ Leaflet.draw 1.0.3+82a8b30, a plugin that adds drawing and editing tools to Leaflet powered maps.
  (c) 2012-2017, Jacob Toye, Jon West, Smartrak, Leaflet
 
  https://github.com/Leaflet/Leaflet.draw
  http://leafletjs.com
  */
-(function (window, document, undefined) {/**
+(function (factory, window) { if (typeof define === 'function' && define.amd) { define(['leaflet'], factory); } else if (typeof exports === 'object') { module.exports = factory(require('leaflet')); } if (typeof window !== 'undefined' && window.L) { window.L.Draw = factory(L); } }(function (L) {/**
  * Leaflet.draw assumes that you have already included the Leaflet library.
  */
-L.drawVersion = "1.0.3+d5dd117";
+L.drawVersion = "1.0.3+82a8b30";
 /**
  * @class L.Draw
  * @aka Draw
@@ -4770,5 +4770,5 @@ L.EditToolbar.Delete = L.Handler.extend({
 
 
 
-}(window, document));
+return L.Draw; }, window));
 //# sourceMappingURL=leaflet.draw-src.map
